@@ -1,0 +1,16 @@
+PODS:
+  - ves-sample (0.0.2)
+
+DEPENDENCIES:
+  - ves-sample (from `https://raw.githubusercontent.com/VIDY/ios-sample-vidy-sdk/master/ves-sample.podspec`)
+
+EXTERNAL SOURCES:
+  ves-sample:
+    :podspec: https://raw.githubusercontent.com/VIDY/ios-sample-vidy-sdk/master/ves-sample.podspec
+
+SPEC CHECKSUMS:
+  ves-sample: 921dfedc0ff6bbc9dfe8a770d7ba6d98b8bdb80c
+
+PODFILE CHECKSUM: c9dc29fd1dea592420f5c5b47ef4efeb4037c290
+
+COCOAPODS: 1.5.3

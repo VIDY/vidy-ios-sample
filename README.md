@@ -7,7 +7,7 @@ The Vidy SDK is an iOS library that injects Social Vidys into an iOS App. We des
 The beauty of the SDK is that it's minimal by design. No custom views required. It works by swizzling UILabel's -drawRect: and modifying it for activated UILabel instances by drawing custom background highlighting. For all intents and purposes, all a developer needs to do is register their App ID, and in an instant your app will be updated with the Vidys you have configured in the Publisher dashboard. With a Vidy SDK-enabled app, users will not notice anything immediately different, but in actuality, they are being presented with Vidy's revolutionary minimalistic approach to advertising. No longer will users be inundated with gaudy advertisements. Now their experience will be seamless, giving power to the user to decide whether or not they want to interact with the advertisements.
 
 ## Prerequisites
-* Xcode 9+
+* Xcode 9.3+
 
 ## Installation
 

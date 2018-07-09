@@ -1,7 +1,11 @@
+<div align="center">
 <img
-  src="https://i.imgur.com/i1jiMqt.png"
+  src="https://i.imgur.com/QByDWEn.png"
   title="iOS Sample VIDY SDK"
-  width="100%">
+  width="400px">
+</div>
+
+-----------------
 
 ## Summary
 

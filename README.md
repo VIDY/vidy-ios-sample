@@ -16,10 +16,10 @@ The Vidy SDK is an iOS library that injects Social Vidys into an iOS App. It is 
 ## Installation
 
 Cocoapods (recommended)
-* ```pod 'ves-sample', :podspec => 'https://raw.githubusercontent.com/VIDY/ios-embed-sdk-sample/master/ves-sample.podspec'```
+* ```pod 'ves-sample', :podspec => 'https://raw.githubusercontent.com/VIDY/vidy-ios-sample/master/ves-sample.podspec'```
 
 Manual
-1. Download the latest VDYEmbedSDK-sample zip <a href="https://github.com/VIDY/ios-embed-sdk-sample" target="_blank">here</a> and add the framework to your project as an embedded library.
+1. Download the latest VDYEmbedSDK-sample zip <a href="https://github.com/VIDY/vidy-ios-sample" target="_blank">here</a> and add the framework to your project as an embedded library.
 2. Add a Run Script Build Phase with the following command:
 ```bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/VDYEmbedSDK.framework/strip-frameworks.sh"```
 

@@ -1,6 +1,6 @@
 <div align="center">
 <img
-  src="https://i.imgur.com/QByDWEn.png"
+  src="https://i.imgur.com/PN0fl7t.png"
   title="iOS Sample VIDY SDK"
   width="400px">
 </div>

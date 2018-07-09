@@ -1,5 +1,5 @@
 <img
-  src="https://i.imgur.com/Y2GILEy.png"
+  src="https://i.imgur.com/i1jiMqt.png"
   title="iOS Sample VIDY SDK"
   width="100%">
 

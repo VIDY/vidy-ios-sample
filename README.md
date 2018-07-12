@@ -41,11 +41,11 @@ VDYEmbedSDK.shared().configure([kVDYEmbedSDKConfigurationAppID : "yourAppID", kV
 
 ### 2. Activate UILabel instances
 
-Swift
+Swift (at the moment, not supplying a postID is unsupported)
 ```swift
 VDYEmbedSDK.shared().activate(label: label, viewController: self, displayDelegate: self)
 ```
-#### If supplying a PostID:
+#### If supplying a PostID (at the moment, this is required):
 
 Swift
 ```swift

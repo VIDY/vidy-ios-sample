@@ -8,7 +8,7 @@
 
 ## Summary
 
-The Vidy SDK is an iOS library that injects Social Vidys into an iOS App. It is compatible with both Objective-C and Swift projects.
+The Vidy SDK is an iOS library that injects Social Vidys into an iOS App. It supports both Objective-C and Swift projects.
 
 ## Prerequisites
 * Xcode 9.3+
@@ -32,11 +32,10 @@ Swift
 ```import VDYEmbedSDK```
 
 ### 1. Initialize SDK
-Sample-Only: We pass an array of phrases to Vidy-fy, keyed with `kVDYEmbedSDKConfigurationSAMPLEONLYPhrasesArray`. The sample SDK Vidy-fies the first instance of each phrase in each UILabel instance. Final behavior is dictated by Vidy Publisher Dashboard configuration.
 
 Swift
 ```swift
-VDYEmbedSDK.shared().configure([kVDYEmbedSDKConfigurationAppID : "yourAppID", kVDYEmbedSDKConfigurationSAMPLEONLYPhrasesArray : ["phrases that","i want Vidy-fied"]])
+VDYEmbedSDK.shared().configure([kVDYEmbedSDKConfigurationAppID : "yourAppID"])
 ```
 
 ### 2. Activate UILabel instances
@@ -45,7 +44,8 @@ Swift (at the moment, not supplying a postID is unsupported)
 ```swift
 VDYEmbedSDK.shared().activate(label: label, viewController: self, displayDelegate: self)
 ```
-#### If supplying a PostID (at the moment, this is required):
+#### When supplying a PostID (at the moment, this is required):
+All labels that combine to form the content of the PostID must be included.
 
 Swift
 ```swift

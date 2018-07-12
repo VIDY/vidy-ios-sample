@@ -6,6 +6,6 @@ target 'SwiftExample' do
   use_frameworks!
 
   # Pods for SwiftExample
-  pod 'ves-sample', :podspec => 'https://raw.githubusercontent.com/VIDY/ios-sample-vidy-sdk/master/ves-sample.podspec'
+  pod 'ves-sample', :podspec => 'https://raw.githubusercontent.com/VIDY/vidy-ios-sample/master/ves-sample.podspec'
 
 end

@@ -18,44 +18,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRu-kp-RQg">
-                                <rect key="frame" x="16" y="46" width="343" height="24"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdW-zz-7b2">
-                                <rect key="frame" x="16" y="98" width="343" height="284.5"/>
-                                <string key="text">This is the first sentence of the post. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Last sentence of the first paragraph.</string>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" red="0.092576101036269454" green="0.092576101036269454" blue="0.092576101036269454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYY-IL-ow8">
-                                <rect key="frame" x="16" y="400" width="343" height="262.5"/>
-                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. This is the last sentence of the post.</string>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" red="0.092576101039999997" green="0.092576101039999997" blue="0.092576101039999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gfY-mi-Iad">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRu-kp-RQg">
+                                        <rect key="frame" x="147.5" y="16" width="80.5" height="24"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdW-zz-7b2">
+                                        <rect key="frame" x="16" y="56" width="343" height="196.5"/>
+                                        <string key="text">A conversation with Kanye West demands staying on your toes. Just as his music combines many startlingly original sounds, in person he moves between unexpected ideas and makes unexpected associations. He speaks in freeform, similar to his raps, letting it flow from one sentence to the next, often in a jumpy way that—somehow—circles back to where he began.</string>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" red="0.092576101036269454" green="0.092576101036269454" blue="0.092576101036269454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYY-IL-ow8">
+                                        <rect key="frame" x="16" y="271.5" width="343" height="218.5"/>
+                                        <string key="text">In certain moments, he’ll pause for a few seconds, reticent and hyper-aware of how his words will be received. Other times, he’ll let out a flurry of ideas, confident and upbeat. There’s a rhythm to his words. A syncopation. Nearly every sentence he says packs potency. This has made him one of the most loved and hated artists of our time, in addition to being one of the most critically acclaimed.</string>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" red="0.092576101039999997" green="0.092576101039999997" blue="0.092576101039999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJO-ie-DYo" userLabel="Label3">
+                                        <rect key="frame" x="16" y="509" width="343" height="306.5"/>
+                                        <mutableString key="text">Despite all this, West’s public persona remains stubbornly one-dimensional. The press cares largely about things like his marriage, his braggadocio, and his beef with this person or that, creating depthless gossip in the pursuit of clicks. This churn ignores the fact that West is acutely engaged with art and culture, in a way that perhaps no other world-famous pop star is. His immersion in a range of creative realms—including architecture, design, fashion, film, and music—has little to do with his being a celebrity. When you speak with him, it’s clear where his heart is.</mutableString>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" red="0.092576101039999997" green="0.092576101039999997" blue="0.092576101039999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="TRu-kp-RQg" firstAttribute="centerX" secondItem="gfY-mi-Iad" secondAttribute="centerX" id="CxN-kK-HfT"/>
+                                    <constraint firstItem="TRu-kp-RQg" firstAttribute="top" secondItem="gfY-mi-Iad" secondAttribute="top" constant="16" id="GNc-A9-HA9"/>
+                                    <constraint firstItem="EdW-zz-7b2" firstAttribute="leading" secondItem="gfY-mi-Iad" secondAttribute="leading" constant="16" id="MzD-Jv-4aE"/>
+                                    <constraint firstItem="kJO-ie-DYo" firstAttribute="centerX" secondItem="gfY-mi-Iad" secondAttribute="centerX" id="Qav-Qv-HFn"/>
+                                    <constraint firstAttribute="trailing" secondItem="EdW-zz-7b2" secondAttribute="trailing" constant="16" id="R2A-0d-tGJ"/>
+                                    <constraint firstItem="EdW-zz-7b2" firstAttribute="top" secondItem="TRu-kp-RQg" secondAttribute="bottom" constant="16" id="RPi-BO-rxj"/>
+                                    <constraint firstAttribute="trailing" secondItem="kJO-ie-DYo" secondAttribute="trailing" constant="16" id="Wda-Eu-kWs"/>
+                                    <constraint firstAttribute="trailing" secondItem="PYY-IL-ow8" secondAttribute="trailing" constant="16" id="Ww7-UJ-v0Y"/>
+                                    <constraint firstItem="EdW-zz-7b2" firstAttribute="centerX" secondItem="gfY-mi-Iad" secondAttribute="centerX" id="a7V-eq-wm0"/>
+                                    <constraint firstItem="PYY-IL-ow8" firstAttribute="leading" secondItem="gfY-mi-Iad" secondAttribute="leading" constant="16" id="fCq-Rn-ebm"/>
+                                    <constraint firstItem="kJO-ie-DYo" firstAttribute="top" secondItem="PYY-IL-ow8" secondAttribute="bottom" constant="19" id="gWL-fr-FFi"/>
+                                    <constraint firstItem="PYY-IL-ow8" firstAttribute="centerX" secondItem="gfY-mi-Iad" secondAttribute="centerX" id="hqd-vb-wSf"/>
+                                    <constraint firstItem="PYY-IL-ow8" firstAttribute="top" secondItem="EdW-zz-7b2" secondAttribute="bottom" constant="19" id="uMt-wo-zHA"/>
+                                    <constraint firstItem="kJO-ie-DYo" firstAttribute="leading" secondItem="gfY-mi-Iad" secondAttribute="leading" constant="16" id="ynM-sh-oPm"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="EdW-zz-7b2" firstAttribute="top" secondItem="TRu-kp-RQg" secondAttribute="bottom" constant="28" id="6wF-oy-31H"/>
-                            <constraint firstItem="PYY-IL-ow8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Azl-Sb-9WZ"/>
-                            <constraint firstItem="EdW-zz-7b2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Ey8-m9-8Cz"/>
-                            <constraint firstItem="TRu-kp-RQg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="K6S-yt-SqC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EdW-zz-7b2" secondAttribute="trailing" constant="16" id="Ljl-hd-OLy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="TRu-kp-RQg" secondAttribute="bottom" constant="-50" id="NIz-Rb-qCn"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TRu-kp-RQg" secondAttribute="trailing" constant="16" id="aOs-As-p9s"/>
-                            <constraint firstItem="PYY-IL-ow8" firstAttribute="top" secondItem="EdW-zz-7b2" secondAttribute="bottom" constant="18" id="u9q-Ee-Luz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PYY-IL-ow8" secondAttribute="trailing" constant="16" id="wVm-Ji-9G3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gfY-mi-Iad" secondAttribute="trailing" id="BI6-u8-Lqa"/>
+                            <constraint firstItem="gfY-mi-Iad" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GxI-Wg-Zo5"/>
+                            <constraint firstItem="gfY-mi-Iad" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Hc8-BA-I7Y"/>
+                            <constraint firstItem="gfY-mi-Iad" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="J7Q-xA-EbE"/>
+                            <constraint firstItem="gfY-mi-Iad" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="V3V-IT-S4y"/>
+                            <constraint firstItem="gfY-mi-Iad" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" id="b3Z-Qn-ciF"/>
+                            <constraint firstItem="gfY-mi-Iad" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="sc3-YL-dOC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gfY-mi-Iad" secondAttribute="bottom" id="vzV-fX-HBU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="label1" destination="EdW-zz-7b2" id="vTH-GF-g1T"/>
                         <outlet property="label2" destination="PYY-IL-ow8" id="bsi-hS-YAu"/>
+                        <outlet property="label3" destination="kJO-ie-DYo" id="t2N-R5-WXo"/>
+                        <outlet property="scrollView" destination="gfY-mi-Iad" id="YkF-ik-CO8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

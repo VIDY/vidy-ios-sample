@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        VDYEmbedSDK.shared().configure([kVDYEmbedSDKConfigurationAppID : "yourAppID", kVDYEmbedSDKConfigurationSAMPLEONLYPhrasesArray: ["This is the first sentence of the post.", "Last sentence of the first paragraph.", "This is the last sentence of the post."]])
+        VDYEmbedSDK.shared().configure([kVDYEmbedSDKConfigurationAppID : "bd051c1e-33ae-4ffa-b3d7-74f10a949ed7"])
         
         return true
     }

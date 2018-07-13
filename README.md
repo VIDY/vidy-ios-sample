@@ -61,3 +61,9 @@ func vdy_containerTextChanged(_ container: UIView & VDYAttributedTextDisplay) {
     view.setNeedsLayout()
 }
 ```
+
+## Output
+
+| On Press | Transitioning | Complete |
+:-------------------------:|:-------------------------:|:-------------------------:
+![](https://i.imgur.com/gIIczGm.png)|![](https://i.imgur.com/nmXlVGc.png)|![](https://i.imgur.com/MDC02QL.png)

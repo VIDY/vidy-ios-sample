@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :podspec: https://raw.githubusercontent.com/VIDY/vidy-ios-sample/master/ves-sample.podspec
 
 SPEC CHECKSUMS:
-  ves-sample: 8eab6a554b0d27a0cddb79bb20d55d5838109db3
+  ves-sample: 309c7d549d759f3196031fb8cb76a713987afef9
 
 PODFILE CHECKSUM: 7329f1117cedde3bd1284758f18d6d636be8d775
 

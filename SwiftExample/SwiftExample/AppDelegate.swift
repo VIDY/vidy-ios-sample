@@ -18,7 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        VDYEmbedSDK.shared().configure([kVDYEmbedSDKConfigurationAppID : "bd051c1e-33ae-4ffa-b3d7-74f10a949ed7"])
+        // Configuring the SDK with our App ID
+        let myAppID = "bd051c1e-33ae-4ffa-b3d7-74f10a949ed7"
+        VDYEmbedSDK.shared().configure([kVDYEmbedSDKConfigurationAppID : myAppID])
         
         return true
     }

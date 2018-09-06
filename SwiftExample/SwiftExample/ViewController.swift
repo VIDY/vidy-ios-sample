@@ -9,7 +9,7 @@
 import UIKit
 import VDYEmbedSDK
 
-class ViewController: UIViewController, VDYDisplayDelegate {
+class ViewController: UIViewController {
 
     @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var label2: UILabel!
@@ -20,24 +20,66 @@ class ViewController: UIViewController, VDYDisplayDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        VDYEmbedSDK.shared().activate(labels: [label1, label2, label3], viewController: self, postID: "demo-post-slug", displayDelegate: self)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+        scrollView.delegate = self
         
-        self.scrollView.contentSize = CGSize(width: view.bounds.width, height: label3.frame.maxY)
+        // Activate all labels that are part of the presented postID together
+        let myPostID = "demo-post-slug"
+        VDYEmbedSDK.shared().activate(labels: [label1, label2, label3], viewController: self, postID: myPostID, displayDelegate: self)
     }
     
-    func vdy_containerTextChanged(_ container: UIView & VDYAttributedTextDisplay) {
-        view.setNeedsLayout() // If applicable
+    /// Executes any pending changeBlocks on our labels, with animation, if our scrollView is not tracking/dragging/decelerating
+    ///
+    /// - Parameter forced: determines whether we should mind the scrollView's tracking/dragging/decelerating properties
+    func executeChangeBlocksForced(forced: Bool) {
+        let allowed = forced || (!self.scrollView.isTracking && !self.scrollView.isDragging && !self.scrollView.isDecelerating)
+        
+        if (allowed) {
+            for label in [ label1, label2, label3 ] {
+                if let changeBlock = label?.vdy_pendingChangeBlock {
+                    UIView.transition(with: label!, duration: 0.33, options: [.transitionCrossDissolve, .allowUserInteraction], animations: {
+                        changeBlock()
+                    }, completion: nil)
+                }
+            }
+        }
     }
-
 
 }
 
+extension ViewController : VDYDisplayDelegate {
+    
+    func vdy_container(_ container: UIView & VDYAttributedTextDisplay, shouldUpdate update: UnsafeMutablePointer<ObjCBool>!, withPendingChange changeBlock: (() -> Void)!) {
+        // Notifies VDYEmbedSDK that it should not execute the changeBlock
+        update.initialize(to: .init(false))
+        
+        // Attempting to execute on our own
+        executeChangeBlocksForced(forced: false)
+    }
+    
+//    Implement this method if manually laying out containers
+//    func vdy_containerTextChanged(_ container: UIView & VDYAttributedTextDisplay) {
+//        view.setNeedsLayout()
+//    }
+    
+}
+
+// These callbacks help us determine when to execute changeBlocks for smooth transitions
+extension ViewController : UIScrollViewDelegate {
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if decelerate == false {
+            executeChangeBlocksForced(forced: false)
+        }
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        executeChangeBlocksForced(forced: false)
+    }
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        if (targetContentOffset.pointee.equalTo(scrollView.contentOffset)) {
+            executeChangeBlocksForced(forced: true)
+        }
+    }
+    
+}

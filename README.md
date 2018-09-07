@@ -40,25 +40,59 @@ VDYEmbedSDK.shared().configure([kVDYEmbedSDKConfigurationAppID : "yourAppID"])
 
 ### 2. Activate UILabel instances
 
-Swift (at the moment, not supplying a postID is unsupported)
+(At the moment, not supplying a postID is unsupported)
 ```swift
 VDYEmbedSDK.shared().activate(label: label, viewController: self, displayDelegate: self)
 ```
-#### When supplying a PostID (at the moment, this is required):
-All labels that combine to form the content of the PostID must be included.
+#### When supplying a PostID:
+(At the moment, this is required) all labels that combine to form the content of the PostID must be included.
 
-Swift
 ```swift
 VDYEmbedSDK.shared().activate(labels: [label1, label2, label3], viewController: self, postID: "yourPostID", displayDelegate: self)
 ```
 
-### 3. (If applicable) use delegate callback to update layout
+### 3. BASIC - (If applicable) use delegate callback to update layout
 
-Swift
 ```swift
 func vdy_containerTextChanged(_ container: UIView & VDYAttributedTextDisplay) {
     // Update layout as necessary
     view.setNeedsLayout()
+}
+```
+
+### 3. ADVANCED - (See example) use delegate callback to update layout when appropriate
+
+The required `changeBlock` occurs on the main thread and is processor-intensive, thus it is wise to perform execution at a time when it will impact user interaction minimally, e.g. outside of scroll interactions. You may notify the VDYEmbedSDK that you wish to execute the `changeBlock` on your own, manually, via the following delegate method:
+```swift
+func vdy_container(_ container: UIView & VDYAttributedTextDisplay, shouldUpdate update: UnsafeMutablePointer<ObjCBool>!, withPendingChange changeBlock: (() -> Void)!) {
+    // Notifies VDYEmbedSDK that it should not execute the changeBlock
+    update.initialize(to: .init(false))
+
+    // Attempting to execute on our own now, if allowed
+    executeChangeBlocksForced(forced: false)
+}
+```
+
+```swift
+func vdy_containerTextChanged(_ container: UIView & VDYAttributedTextDisplay) {
+    // Update layout as necessary (if applicable)
+    view.setNeedsLayout()
+}
+```    
+```swift
+// This method to be called at VDYDisplayDelegate callback and UIScrollViewDelegate callbacks, when it will minimally impact the UI
+func executeChangeBlocksForced(forced: Bool) {
+  let allowed = forced || (!scrollView.isTracking && !scrollView.isDragging && !scrollView.isDecelerating)
+
+  if (allowed) {
+      for label in labels {
+          if let changeBlock = label?.vdy_pendingChangeBlock {
+              UIView.transition(with: label!, duration: 0.33, options: [.transitionCrossDissolve, .allowUserInteraction], animations: {
+                  changeBlock()
+              }, completion: nil)
+          }
+      }
+  }
 }
 ```
 

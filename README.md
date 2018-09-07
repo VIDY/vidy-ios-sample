@@ -69,7 +69,7 @@ func vdy_container(_ container: UIView & VDYAttributedTextDisplay, shouldUpdate 
     update.initialize(to: .init(false))
 
     // Attempting to execute on our own now, if allowed
-    executeChangeBlocksForced(forced: false)
+    executeChangeBlocks(forced: false)
 }
 ```
 
@@ -81,7 +81,7 @@ func vdy_containerTextChanged(_ container: UIView & VDYAttributedTextDisplay) {
 ```    
 ```swift
 // This method to be called at VDYDisplayDelegate callback and UIScrollViewDelegate callbacks, when it will minimally impact the UI
-func executeChangeBlocksForced(forced: Bool) {
+func executeChangeBlocks(forced: Bool) {
   let allowed = forced || (!scrollView.isTracking && !scrollView.isDragging && !scrollView.isDecelerating)
 
   if (allowed) {

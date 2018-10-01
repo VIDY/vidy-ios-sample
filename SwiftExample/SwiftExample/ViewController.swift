@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     ///
     /// - Parameter forced: determines whether we should mind the scrollView's tracking/dragging/decelerating properties
     func executeChangeBlocksForced(forced: Bool) {
-        let allowed = forced || (!self.scrollView.isTracking && !self.scrollView.isDragging && !self.scrollView.isDecelerating)
+        let allowed = forced || (!scrollView.isTracking && !scrollView.isDragging && !scrollView.isDecelerating)
         
         if (allowed) {
             for label in [ label1, label2, label3 ] {

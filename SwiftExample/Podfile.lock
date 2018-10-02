@@ -1,5 +1,5 @@
 PODS:
-  - ves-sample (0.1.5)
+  - ves-sample (0.1.7)
 
 DEPENDENCIES:
   - ves-sample (from `https://raw.githubusercontent.com/VIDY/vidy-ios-sample/master/ves-sample.podspec`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :podspec: https://raw.githubusercontent.com/VIDY/vidy-ios-sample/master/ves-sample.podspec
 
 SPEC CHECKSUMS:
-  ves-sample: fd74a8fc3113d2cdf87bc7986c4ba530a51fc596
+  ves-sample: ab2cca1c15b47fa1abf27098e940e17f25b6c9cf
 
 PODFILE CHECKSUM: 7329f1117cedde3bd1284758f18d6d636be8d775
 
